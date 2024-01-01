@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- icons font-awesome-->
+    <script
+      src="https://kit.fontawesome.com/df336f5127.js"
+      crossorigin="anonymous"></script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./Media/Greek_Omega.png" type="image/x-icon" />
+    <title>WatchShop</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="pb-5 px-3 font-bold text-lg tracking-wider">
+            <a href="./index.html" class="logo">
+              <span class="flex items-center">
+                <img
+                  src="./Media/Greek_Omega.png"
+                  alt=""
+                  class="h-7 w-7 mb-[9px]" />
+                mega
+              </span>
+            </a>
+          </div>
+
+          <div
+            class="primaryNav py-5 hidden md:flex space-x-1 ml-auto md:mr-[50px]">
+            <a href="#" class="px-3">collections</a>
+            <a href="#" class="px-3">products</a>
+            <a href="#" class="px-3">special offers</a>
+            <a href="#" class="px-3">contact</a>
+          </div>
+
+          <div class="flex justify-between space-x-2">
+            <button class="search">
+              <div class="px-3">
+                <i class="fa fa-search"></i>
+              </div>
+            </button>
+            <button>
+              <div class="mobile-menu-button px-4 md:hidden flex items-center">
+                <i class="fa fa-bars"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div
+        class="mobile-menu hidden md:hidden flex flex-col items-center py-2 px-2 ml-auto mr-[10px]">
+        <a href="#" class="px-2 py-1">collections</a>
+        <a href="#" class="px-2 py-1">products</a>
+        <a href="#" class="px-2 py-1">special offers</a>
+        <a href="#" class="px-2 py-1">contact</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="watch">
+        <img
+          class="mx-auto mt-[50px]"
+          id="watchImage"
+          src="./Media/LP_watch1.png"
+          alt="watch" />
+      </div>
+
+      <div class="stripes">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+      </div>
+
+      <div class="info">
+        <div class="title">
+          <p class="uppercase text-gray-500 tracking-wider">speedmaster</p>
+          <span
+            class="text-[70px] font-bold tracking-wider md:tracking-wide md:text-[60px]"
+            id="moonWatch"
+            >Moonwatch.</span
+          >
+        </div>
+
+        <a href="" class="order lowercase text-white">
+          <div class="btn bg-[#ff3131] p-3 rounded-xl text-center mt-[60px]">
+            Order Now
+          </div>
+        </a>
+      </div>
+
+      <div class="socials flex flex-col space-y-4">
+        <a href="https://web.facebook.com/omega/?_rdc=1&_rdr">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/omega/">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a
+          href="https://twitter.com/omegawatches?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.tiktok.com/@omega?lang=en">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+
+      <div class="year">2024</div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Footer- Dont really need one for this project, ive decided to exclude it -->
+    <!-- <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>Your watch destination for style and elegance.</p>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact-form">
+          <h2>Contact Us</h2>
+          <form action="#">
+            <input
+              type="email"
+              name="email"
+              class="text-input contact-input"
+              placeholder="Your email address" />
+            <textarea
+              rows="4"
+              name="message"
+              class="text-input contact-input"
+              placeholder="Your message"></textarea>
+            <button type="submit" class="btn btn-big contact-btn">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Watch E-Commerce</p>
+      </div>
+    </footer> -->
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- icons font-awesome-->
+    <script
+      src="https://kit.fontawesome.com/df336f5127.js"
+      crossorigin="anonymous"></script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="style_contact.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./Media/Greek_Omega.png" type="image/x-icon" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="py-5 px-3 font-bold text-lg tracking-wider">
+            <a href="./index.html" class="logo">
+              <span class="flex items-center">
+                <img
+                  src="./Media/Greek_Omega.png"
+                  alt=""
+                  class="h-7 w-7 mb-[9px]" />
+                mega
+              </span>
+            </a>
+          </div>
+
+          <div class="primaryNav hidden md:flex space-x-1 ml-auto md:mr-[50px]">
+            <a href="#" class="px-3">collections</a>
+            <a href="#" class="px-3">products</a>
+            <a href="#" class="px-3">special offers</a>
+            <a href="contact.html" class="px-3">contact</a>
+          </div>
+
+          <div class="flex justify-between space-x-2">
+            <button class="search">
+              <div class="px-3">
+                <i class="fa fa-search"></i>
+              </div>
+            </button>
+            <button>
+              <div class="mobile-menu-button px-4 md:hidden flex items-center">
+                <i class="fa fa-bars"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div
+        class="mobile-menu hidden md:hidden flex flex-col items-center py-2 px-2 ml-auto mr-[10px]">
+        <a href="#" class="px-2 py-1">collections</a>
+        <a href="#" class="px-2 py-1">products</a>
+        <a href="/no" class="px-2 py-1">special offers</a>
+        <a href="contact.html" class="px-2 py-1">contact</a>
+      </div>
+    </nav>
+
+    <div class="overlay">
+      <div class="heading">
+        <h2 class="text-red-600 uppercase">My Omega</h2>
+        <p>
+          To contact us, simply login. If you are not already registered, please
+          create a new My OMEGA account.
+        </p>
+      </div>
+
+      <div class="contact-forms flex justify-between">
+        <div class="account mr-[60px]">
+          <h3>I have an Account</h3>
+          <form action="submit" class="flex flex-col space-y-3 mt-[40px]">
+            <input type="email" placeholder="Email" class="ps-4 mb-2" />
+            <input type="password" placeholder="Password" class="ps-4" />
+          </form>
+          <p class="mt-4 ps-3 underline text-black font-bold">
+            <a href="#">Forgot your password?</a>
+          </p>
+          <button type="submit" class="login-btn uppercase">Login</button>
+        </div>
+
+        <div class="no-account">
+          <h3>I don't have an Account</h3>
+          <p class="mt-4 py-5">
+            Create a My OMEGA account to benefit from our exclusive services and
+            keep up to date with our latest publications.
+          </p>
+          <button type="submit" class="sign-up-btn uppercase">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

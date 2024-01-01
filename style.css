@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Ubuntu:ital,wght@1,300;1,400;1,500;1,700&display=swap');
+html,
+body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: poppins;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo{
+    position: fixed;
+    z-index: 3;
+}
+.logo:hover {
+    cursor: pointer;
+}
+
+.primaryNav a{
+    position: relative;
+    letter-spacing: 0.035rem;
+}
+.primaryNav a::after{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 0;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    background: #ff3131;
+    transition: width 0.4s;
+}
+.primaryNav a:hover::after{
+    width: 80%;
+}
+
+.line-1{
+    position: absolute;
+    top: 0%;
+    left: 23%;
+    width: 15px;
+    height: 100vh;
+    background: #ff3131;
+
+}
+.line-2{
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 100vh;
+    left: 26%;
+    background: #183d79;
+
+}
+
+.watch img{
+    position: relative;
+    width: 550px;
+    height: auto;
+    left: -21.5%;
+    bottom: 120px;
+    z-index: 2;
+}
+
+.info
+{
+    position: relative;
+    bottom: 570px;
+    left: 55%;
+    z-index: 2;
+    line-height: 0.85;
+}
+.info .title p{
+    font-size: 47px;
+    font-weight: 300;
+}
+.info .btn{
+    width: 250px;
+    margin-left: auto;
+    margin-right: 75%;
+    transition: 0.6s;
+}
+.info .btn:hover{
+    background: #000;
+}
+
+.socials{
+    position: fixed;
+    top: 66%;
+    left: 93%;
+    font-size: 25px;
+}
+.socials i{
+    transition: 0.6s;
+    padding: 10px 30px;
+}
+.socials i:hover{
+    transform: scale(1.9);
+    cursor: pointer;
+}
+
+.year{
+    position: fixed;
+    bottom: 4%;
+    left: 6%;
+    font-weight: 600;
+    padding: 9px;
+    border: 2px solid #183d79;
+    border-radius: 8px;
+}
+
+.mobile-menu{
+    background-color: rgb(230, 230, 230);
+    width: 150px;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 4;
+    right: 4px;
+    top: 50px;
+}
+
+/* Footer */
+/* footer {
+    background: #183d79;
+    color: #fff;
+    padding: 30px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.about h2,
+.links h2,
+.contact-form h2 {
+    color: #fff;
+}
+
+.about p {
+    font-size: 0.9em;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.contact-btn {
+    padding: 10px;
+    background: #fff;
+    color: #222;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #777;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-section {
+        margin-bottom: 20px;
+    }
+} */
+/* Footer ends */
+
+@media screen and (max-width: 990px) {
+    .line-1{
+        left: 135px;
+    }
+    
+    .line-2 {
+        left: 165px;
+    }
+
+    .watch img {
+        width: 400px;
+        left: -28%;
+        bottom: 100px;
+    }
+
+    .info {
+        left: 46%;
+    }
+
+    .info .title p {
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .info .btn{
+        width: 200px;
+        margin-left: auto;
+        margin-right: 100px;
+        transition: 0.6s;
+    }
+
+    .socials{
+        position: fixed;
+        top: 66%;
+        left: 91%;
+        font-size: 21px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .line-1{
+        left: 100px;
+    }
+    
+    .line-2 {
+        left: 120px;
+    }
+
+    .watch img {
+        position: fixed;
+        width: 350px;
+        left: -15.5%;
+        bottom: 20%;
+    }
+
+    .info {
+        position: fixed;
+        left: 66%;
+        top: 260px;
+        line-height: 1.2;
+    }
+    .info .title p {
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0em;
+    }
+    .info .title span{
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        display: block;
+        left: 15px;
+        position: relative;
+        line-height: 0.77;
+    }
+    .info .btn{
+        width: 90px;
+        margin-left: auto;
+        margin-right: 10px;
+        margin-top: 40px;
+        transition: 0.6s;
+        padding: 12px 7px;
+        font-size: 13px;
+    }
+
+    .socials{
+        position: fixed;
+        top: 66%;
+        left: 82%;
+        font-size: 21px;
+    }
+
+    .year{
+    position: fixed;
+    bottom: 4%;
+    left: 4%;
+    font-weight: 400;
+    padding: 7px 4px;
+    font-size: small;
+    }
+}
