@@ -57,31 +57,51 @@ const images = [
 ];
 
 let currentIndex = 0;
+let isAnimating = false;
 
-function changeImage() {
-  // Reset image properties
-  gsap.set("#watchImage", { opacity: 0, y: -800 });
-
-  // Change image source
-  document.getElementById("watchImage").src = images[currentIndex];
-
-  // Animate new image
-  gsap.to("#watchImage", {
-    opacity: 1,
-    y: 0,
-    duration: 2,
-    ease: Expo.easeInOut,
-    onComplete: () => {
-      // Increment index or reset to 0 if at the end
-      currentIndex = (currentIndex + 1) % images.length;
-
-      // Repeat the process every few seconds (adjust delay as needed)
-      gsap.delayedCall(4, changeImage);
-    },
+function preloadImages() {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
   });
 }
 
-// Initial call to start the animation
+function changeImage() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  const watchImage = document.getElementById("watchImage");
+  const nextImage = new Image();
+
+  gsap.set(watchImage, { opacity: 0, y: -800 });
+
+  nextImage.src = images[currentIndex];
+
+  nextImage.onload = () => {
+    watchImage.src = nextImage.src;
+
+    gsap.to(watchImage, {
+      opacity: 1,
+      y: 0,
+      duration: 2,
+      ease: Expo.easeInOut,
+      onComplete: () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        isAnimating = false;
+        gsap.delayedCall(3, changeImage);
+      },
+    });
+  };
+
+  nextImage.onerror = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    isAnimating = false;
+    changeImage();
+  };
+}
+
+// Initialize
+preloadImages();
 changeImage();
 // Animation for image end
 
